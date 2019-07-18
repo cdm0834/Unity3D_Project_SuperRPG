@@ -1,0 +1,13 @@
+Idle			0-39
+Walk			110-150
+Run			200-224
+Attack1			280-310
+Attack2			360-379
+AttackCritical		450-471
+TakeDamage1		530-547
+TakeDamage2		600-620
+Death			660-675
+Cast			740-770
+Skill1JumpThrow		840-877
+Skill2DigDown		930-957
+Skill2DigUp		1010-1040	

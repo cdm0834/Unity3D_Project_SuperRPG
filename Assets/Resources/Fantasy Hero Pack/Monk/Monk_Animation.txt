@@ -1,0 +1,12 @@
+Idle			0-39
+Walk			110-150
+Run			200-224
+Attack1			280-302
+Attack2			360-405
+AttackCritical		450-479
+TakeDamage1		530-547
+TakeDamage2		600-620
+Death			660-682
+Cast			730-760
+Skill1Heal		810-858
+Skill2Ball			910-953
