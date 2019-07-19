@@ -166,12 +166,14 @@ public class Boss : MonoBehaviour {
             BossCamera.SetActive(true);
             GetComponent<Animator>().SetBool("Dead", true);
             SoundManager.Smanager.PlaySE("Boss_Dead");
+
             yield return new WaitForSeconds(3f);
             FindObjectOfType<State>().DeadBoomspawn();
             this.gameObject.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = false;
+
             yield return new WaitForSeconds(1f);
             BossCamera.SetActive(false);
-            ; QuestScript.Quest.Iq2 += 1;
+            QuestScript.Quest.Iq2 += 1;
             Destroy(this.gameObject);
             SoundManager.Smanager.BgmNum += 1;
             SoundManager.Smanager.bgmOn = true;

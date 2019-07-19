@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class TelePort : MonoBehaviour {
     hierachyTriger Statetri;
-
+    public GameObject Loading;
 
 
     private void OnTriggerEnter(Collider other)
     {
+
         StartCoroutine(Bgm());
         ChangeScene();
     }
@@ -16,10 +17,9 @@ public class TelePort : MonoBehaviour {
 
     void ChangeScene()
     {
-
         Statetri = GameObject.Find("Main_Camera").GetComponent<hierachyTriger>();
         StartCoroutine(LoadAsy("Scene2"));
-        GameObject.Find("Character").transform.position = new Vector3(90f, 13f, 53f);
+        GameObject.Find("Character").transform.position = new Vector3(91.7f, 50f, 57.3f);
         GameObject.Find("Character").transform.rotation = Quaternion.Euler(0, 45, 0);
         CharacterUI joystick = GameObject.Find("Player_Canvas").transform.Find("JoyStick").GetComponent<CharacterUI>();
         joystick.rect_JoyStck.localPosition = Vector3.zero;
@@ -39,11 +39,13 @@ public class TelePort : MonoBehaviour {
 
     IEnumerator LoadAsy (string secenIndex)
     {
+     
         AsyncOperation operation = SceneManager.LoadSceneAsync(secenIndex);
+        Loading.SetActive(true);
 
-
-        while(!operation.isDone)
+        while (!operation.isDone)
         {
+            
             yield return null;
         }
        

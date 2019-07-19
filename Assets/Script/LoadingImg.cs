@@ -7,7 +7,7 @@ public class LoadingImg : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 4f);
 	}
 	
 }
