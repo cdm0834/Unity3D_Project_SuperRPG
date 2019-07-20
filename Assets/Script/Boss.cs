@@ -168,7 +168,7 @@ public class Boss : MonoBehaviour {
             SoundManager.Smanager.PlaySE("Boss_Dead");
 
             yield return new WaitForSeconds(3f);
-            FindObjectOfType<State>().DeadBoomspawn();
+            GetComponent<State>().DeadBoomspawn();
             this.gameObject.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = false;
 
             yield return new WaitForSeconds(1f);

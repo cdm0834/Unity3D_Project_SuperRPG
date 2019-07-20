@@ -15,6 +15,10 @@ public class RotateCamera : MonoBehaviour
     public bool BattleCamera;
     public GameObject Character;
     public Vector3 CharacterPos;
+    private void Awake()
+    {
+        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, true); // 16:9 로 개발시
+    }
 
     private void Start()
     {
@@ -72,6 +76,6 @@ public class RotateCamera : MonoBehaviour
 
     void Update ()
     {
-        rotate();
+        rotate();   
     }
 }

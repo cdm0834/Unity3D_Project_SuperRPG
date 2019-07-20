@@ -19,7 +19,7 @@ public class TelePort : MonoBehaviour {
     {
         Statetri = GameObject.Find("Main_Camera").GetComponent<hierachyTriger>();
         StartCoroutine(LoadAsy("Scene2"));
-        GameObject.Find("Character").transform.position = new Vector3(91.7f, 50f, 57.3f);
+        GameObject.Find("Character").transform.position = new Vector3(91.7f, 30f, 57.3f);
         GameObject.Find("Character").transform.rotation = Quaternion.Euler(0, 45, 0);
         CharacterUI joystick = GameObject.Find("Player_Canvas").transform.Find("JoyStick").GetComponent<CharacterUI>();
         joystick.rect_JoyStck.localPosition = Vector3.zero;
